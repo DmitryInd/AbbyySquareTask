@@ -5,7 +5,7 @@
 
 #define M_PI 3.14159265358979323846
 
-bool check_values_greater_zero(std::vector<double *>& values)
+bool check_values_greater_zero(const std::vector<double *> & values)
 {
 	bool below_zero = false;
 	for (auto value : values) {
@@ -24,8 +24,7 @@ bool check_values_greater_zero(std::vector<double *>& values)
 
 Circle::Circle(double radius) : radius(radius)
 {
-	std::vector<double *> values = { & this->radius };
-	check_values_greater_zero(values);
+	check_values_greater_zero({ &this->radius });
 }
 
 double Circle::get_square()
@@ -35,8 +34,7 @@ double Circle::get_square()
 
 Triangle::Triangle(double a, double b, double angle) : a(a), b(b), angle(angle)
 {
-	std::vector<double*> values = { &this->a, &this->b, &this->angle };
-	check_values_greater_zero(values);
+	check_values_greater_zero({ &this->a, &this->b, &this->angle });
 }
 
 double Triangle::get_square()
@@ -46,8 +44,7 @@ double Triangle::get_square()
 
 Rectangle::Rectangle(double height, double width) : height(height), width(width)
 {
-	std::vector<double*> values = { &this->height, &this->width };
-	check_values_greater_zero(values);
+	check_values_greater_zero({ &this->height, &this->width });
 }
 
 double Rectangle::get_square()
