@@ -27,7 +27,7 @@ Circle::Circle(double radius) : radius(radius)
 	check_values_greater_zero({ &this->radius });
 }
 
-double Circle::get_square()
+double Circle::calculate_area()
 {
 	return std::pow(radius, 2)*M_PI;
 }
@@ -37,7 +37,7 @@ Triangle::Triangle(double a, double b, double angle) : a(a), b(b), angle(angle)
 	check_values_greater_zero({ &this->a, &this->b, &this->angle });
 }
 
-double Triangle::get_square()
+double Triangle::calculate_area()
 {
 	return a*b*std::sin(angle*M_PI/180)/2;
 }
@@ -47,7 +47,7 @@ Rectangle::Rectangle(double height, double width) : height(height), width(width)
 	check_values_greater_zero({ &this->height, &this->width });
 }
 
-double Rectangle::get_square()
+double Rectangle::calculate_area()
 {
 	return width*height;
 }

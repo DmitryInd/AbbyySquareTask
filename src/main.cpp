@@ -42,5 +42,5 @@ int main() {
 		break;
 	}
 
-	std::cout << figure->get_square();
+	std::cout << figure->calculate_area();
 }

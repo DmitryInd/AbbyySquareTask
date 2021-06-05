@@ -10,7 +10,8 @@ enum Figures {
 
 class Figure {
 public:
-	virtual double get_square() = 0;
+	virtual double calculate_area() = 0;
+	virtual ~Figure() = default;
 };
 
 class Circle : public Figure {
@@ -19,7 +20,7 @@ private:
 
 public:
 	explicit Circle(double radius);
-	double get_square() override;
+	double calculate_area() override;
 };
 
 class Triangle : public Figure {
@@ -28,7 +29,7 @@ private:
 
 public:
 	explicit Triangle(double a, double b, double angle);
-	double get_square() override;
+	double calculate_area() override;
 };
 
 class Rectangle : public Figure {
@@ -37,5 +38,5 @@ private:
 
 public:
 	explicit Rectangle(double height, double width);
-	double get_square() override;
+	double calculate_area() override;
 };

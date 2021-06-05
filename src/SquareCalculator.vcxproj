@@ -24,6 +24,7 @@
     <ProjectGuid>{f145e79e-425d-4228-b7b1-bf7848619598}</ProjectGuid>
     <RootNamespace>SquareCalculator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>AreaCalculator</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
